@@ -10,7 +10,7 @@
         <p>詳細</p>
         <%= f.text_area :detail, class: "form-control mb-3" %>
         <div>
-          <%= f.submit "投稿" %>
+          <%= f.submit "投稿", data: { confirm: "本当に変更しますか？" } %>
         </div>
       <% end %>
       <%= link_to "Show", game_path(@game) %>
