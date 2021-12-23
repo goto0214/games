@@ -25,8 +25,11 @@ class GamesController < ApplicationController
 
   def update
     @game = Game.find(params[:id])
-    @game.update(game_params)
-    redirect_to game_path(@game)
+    if @game.update(game_params)
+      redirect_to game_path(@game)
+    else
+      render :edit
+    end
   end
 
   def destroy
