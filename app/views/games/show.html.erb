@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table border mt-5">
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>ジャンル</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @game.title %></td>
+            <td><%= @game.genre %></td>
+            <td><%= @game.detail %></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <%= link_to "Edit", edit_game_path(@game) %>
+        |
+        <%= link_to "Back", games_path %>
+      </div>
+    </div>
+  </div>
+</div>

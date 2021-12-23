@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 mx-auto">
+      <h1>編集ページ</h1>
+      <%= form_with model:@game, local: true do |f| %>
+        <p>タイトル</p>
+        <%= f.text_field :title %>
+        <p>ジャンル</p>
+        <%= f.text_field :genre %>
+        <p>詳細</p>
+        <%= f.text_area :detail, class: "form-control mb-3" %>
+        <div>
+          <%= f.submit "投稿" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
